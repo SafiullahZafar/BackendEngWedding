@@ -40,7 +40,7 @@ router.post("/:group", upload.single("file"), async (req, res) => {
       filename: file.filename,
       type: isVideo ? "video" : "image",
       group,
-      url: `http://localhost:5000/uploads/${group}/${file.filename}`,
+      url: `https://backendengwedding.onrender.com/uploads/${group}/${file.filename}`,
     });
 
     res.json(item);
