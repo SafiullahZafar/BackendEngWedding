@@ -21,7 +21,8 @@ const __dirname = path.dirname(__filename);
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+app.use(express.urlencoded({ extended: true }));
 // ===== ROUTES =====
 app.get("/", (req, res) => {
   res.send("Backend is running");
